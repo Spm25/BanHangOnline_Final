@@ -23,9 +23,11 @@ namespace BanHangOnline_Final.Models.EF
         public bool Deleted { get; set; }
         public bool ShowOnHomePage { get; set; }
         public int DisplayOrder { get; set; }
+        [ForeignKey("Category")]
+        public int CategoryId { get; set; }
         public DateTime CreatedOnUtc { get; set; }
         public DateTime updatedOnUtc { get; set; }
         public Brand Brand { get; set; }
-
+        public Category Category { get; set; }
     }
 }
