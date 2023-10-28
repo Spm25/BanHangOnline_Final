@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+﻿using BanHangOnline_Final.Models.EF;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace BanHangOnline_Final.Data
@@ -9,5 +10,8 @@ namespace BanHangOnline_Final.Data
             : base(options)
         {
         }
+        public DbSet<Product> Products { get; set; }
+        public DbSet<Order> Orders { get; set; }
+        public DbSet<Brand> Brands { get; set; }   
     }
 }
